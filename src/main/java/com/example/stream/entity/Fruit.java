@@ -3,6 +3,7 @@ package com.example.stream.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Fruit {
+public class Fruit implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
